@@ -2,7 +2,7 @@
 title: Getting started with Elasticsearch for Java Developers running on Azure
 description: This tutorial shows how to integrate and configure Elasticsearch Service for Java Developers running on Azure.
 author: Aaron Schifman (Elastic)
-manager: Craig Griffin (Elastic)
+manager: 
 ms.topic: tutorial
 ms.date: 07/20/2020
 ms.author: 
@@ -11,25 +11,33 @@ ms.custom:
 
 # Tutorial: Getting started with monitoriing logs and metrics using Elasticsearch Service for Java developers running on Azure
 
-This tutorial shows you how to provision an Elasticsearch cluster classical Java application to send logs to the [Logz.io](https://logz.io/) service for ingestion and analysis. Logz.io provides a full monitoring solution based on Elasticsearch/Logstash/Kibana (ELK) and Grafana.
+This tutorial shows you how to provision an Elasticsearch Service cluster on Microsoft Azure for analyzing and troubleshooting Azure Monitor logs and metrics. This will provide a full monitoring solution, utilizing a combination of Elasticsearch, Logstash, and Kibana for visualizations.
 
-The tutorial assumes you're using Log4J or Logback. These libraries are the two most widely used for logging in Java, so the tutorial should work for most applications running on Azure. If you're already using the Elastic stack to monitor your Java application, this tutorial shows you how to reconfigure to target the Logz.io endpoint.
+<!--- NEEDS MODIFICATION
+This tutorial assumes you're using Log4J or Logback. These libraries are the two most widely used for logging in Java, so the tutorial should work for most applications running on Azure. If you're already using the Elastic stack to monitor your Java application, this tutorial shows you how to reconfigure to target the Logz.io endpoint.
+--->
 
 In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
-> * Send logs from an existing Java application to Logz.io.
-> * Send diagnostic logs and metrics from Azure services to Logz.io.
+> * Deploy an Elasticsearch Service cluster on Microsoft Azure.
+> * Setup logs and metrics to flow from Azure Monitor.
+> * Enable troubleshooting by utilizing Kibana visualizations
 
 ## Prerequisites
-
+<!--- NEEDS MODIFICATION
 * [Java Developer Kit](https://aka.ms/azure-jdks), version 8 or greater
 * A Logz.io account from the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/logz.logzio-elk-as-a-service-pro)
 * An existing Java application that uses Log4J or Logback
+--->
 
-## Send Java application logs to Logz.io
+## Deploy a hosted Elasticsearch cluster on Microsoft Azure
 
-First, you'll learn how to configure your Java application with a token that gives it access to your Logz.io account.
+From the Azure Marketplace, search for Elasticsearch Service. You will see a link to a trial, where you will enter an email to get started. 
+
+    ![Diagnostics settings panel](media/java-get-started-with-logzio/diagnostics-settings.png)
+
+Next, Create your first deployment
 
 ### Get your Logz.io access token
 
